@@ -1,10 +1,11 @@
 import Hero from './sections/Hero'
+import SmoothScroll from './components/SmoothScroll'
 
 function App() {
   return (
-    <main className="bg-dark text-light">
+    <SmoothScroll>
       <Hero />
-    </main>
+    </SmoothScroll>
   )
 }
 
