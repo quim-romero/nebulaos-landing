@@ -33,7 +33,7 @@ const fadeIn = (direction = 'left', delay = 0) => ({
 
 const WhatIs = () => {
   return (
-    <section className="py-24">
+    <section id="what" className="py-24">
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

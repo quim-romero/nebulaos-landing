@@ -4,7 +4,7 @@ import Container from "../components/Container";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section id="hero" className="relative min-h-screen flex items-center">
       <Container className="text-center">
         <motion.h1
           initial={{ opacity: 0, y: 40, scale: 0.98 }}

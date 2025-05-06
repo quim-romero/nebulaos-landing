@@ -40,7 +40,7 @@ const itemVariants = {
 
 const Features = () => {
   return (
-    <section className="py-28 bg-dark">
+    <section id="features" className="py-28 bg-dark">
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

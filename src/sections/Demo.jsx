@@ -15,7 +15,7 @@ const Demo = () => {
   }
 
   return (
-    <section className="py-28 bg-[#1a1a1e] text-light">
+    <section id="demo" className="py-28 bg-[#1a1a1e] text-light">
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
