@@ -5,6 +5,7 @@ import Features from './sections/Features'
 import Demo from './sections/Demo'
 import Testimonials from './sections/Testimonials'
 import CTA from './sections/CTA'
+import Footer from './components/Footer'
 import SmoothScroll from './components/SmoothScroll'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Demo />
       <Testimonials />
       <CTA />
+      <Footer />
     </SmoothScroll>
   )
 }
