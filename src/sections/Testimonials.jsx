@@ -6,25 +6,31 @@ const testimonials = [
     name: 'Sophia Reyes',
     role: 'Product Manager at HyperloopAI',
     avatar: 'https://i.pravatar.cc/100?u=1',
-    quote: 'NebulaOS changed how I lead my team. It feels like having an AI assistant baked into your operating system.',
+    quote:
+      'NebulaOS changed how I lead my team. It feels like having an AI assistant baked into your operating system.',
   },
   {
     name: 'Liam Zhang',
     role: 'CTO at NovaCloud',
     avatar: 'https://i.pravatar.cc/100?u=2',
-    quote: 'Finally, a tool that doesn’t slow down creativity. It anticipates needs before you even act.',
+    quote:
+      'Finally, a tool that doesn’t slow down creativity. It anticipates needs before you even act.',
   },
   {
     name: 'Ava Martínez',
     role: 'Founder at SynthSpace',
     avatar: 'https://i.pravatar.cc/100?u=3',
-    quote: 'NebulaOS makes everything else feel outdated. Beautiful, efficient, intelligent.',
+    quote:
+      'NebulaOS makes everything else feel outdated. Beautiful, efficient, intelligent.',
   },
 ]
 
 const Testimonials = () => {
   return (
-    <section className="py-28 bg-dark">
+    <section
+      id="testimonials"
+      className="py-28 bg-light text-dark dark:bg-dark dark:text-light transition-colors duration-300"
+    >
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -45,9 +51,10 @@ const Testimonials = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.2, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-[#1d1d22] rounded-xl p-6 w-80 shrink-0 border border-muted/20"
+                className="bg-white dark:bg-[#1d1d22] rounded-xl p-6 w-80 shrink-0 border border-muted/20 
+                           text-dark dark:text-light transition-colors duration-300"
               >
-                <p className="text-sm text-muted mb-4">"{t.quote}"</p>
+                <p className="text-sm text-muted dark:text-muted/80 mb-4">"{t.quote}"</p>
                 <div className="flex items-center gap-4">
                   <img
                     src={t.avatar}
@@ -55,8 +62,8 @@ const Testimonials = () => {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-sm font-semibold text-light">{t.name}</p>
-                    <p className="text-xs text-muted">{t.role}</p>
+                    <p className="text-sm font-semibold">{t.name}</p>
+                    <p className="text-xs text-muted dark:text-muted/60">{t.role}</p>
                   </div>
                 </div>
               </motion.div>

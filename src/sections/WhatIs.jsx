@@ -33,7 +33,10 @@ const fadeIn = (direction = 'left', delay = 0) => ({
 
 const WhatIs = () => {
   return (
-    <section id="what" className="py-24">
+    <section
+      id="what"
+      className="py-24 bg-white text-dark dark:bg-dark dark:text-light transition-colors duration-300"
+    >
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -59,7 +62,9 @@ const WhatIs = () => {
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted max-w-md">{feature.description}</p>
+              <p className="text-muted dark:text-muted/80 max-w-md">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>

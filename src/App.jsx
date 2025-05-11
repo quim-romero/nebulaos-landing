@@ -6,6 +6,7 @@ import Demo from './sections/Demo'
 import Testimonials from './sections/Testimonials'
 import CTA from './sections/CTA'
 import Footer from './components/Footer'
+import ThemeToggle from './components/ThemeToggle'
 import SmoothScroll from './components/SmoothScroll'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Testimonials />
       <CTA />
       <Footer />
+      <ThemeToggle />
     </SmoothScroll>
   )
 }

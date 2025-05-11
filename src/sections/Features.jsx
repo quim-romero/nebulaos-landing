@@ -40,7 +40,10 @@ const itemVariants = {
 
 const Features = () => {
   return (
-    <section id="features" className="py-28 bg-dark">
+    <section
+      id="features"
+      className="py-28 bg-light text-dark dark:bg-dark dark:text-light transition-colors duration-300"
+    >
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -56,7 +59,8 @@ const Features = () => {
           {features.map((f, i) => (
             <motion.div
               key={i}
-              className="p-6 border border-muted/20 rounded-xl hover:shadow-xl hover:border-primary transition-all bg-dark"
+              className="p-6 border border-muted/20 rounded-xl hover:shadow-xl hover:border-primary transition-all 
+                         bg-white text-dark dark:bg-[#1d1d22] dark:text-light"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.4 }}
@@ -65,7 +69,7 @@ const Features = () => {
             >
               <div className="text-primary mb-4">{f.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{f.title}</h3>
-              <p className="text-muted">{f.description}</p>
+              <p className="text-muted dark:text-muted/80">{f.description}</p>
             </motion.div>
           ))}
         </div>
