@@ -6,7 +6,8 @@ const features = [
   {
     icon: <FiCpu size={28} />,
     title: 'AI-native architecture',
-    description: 'Designed from scratch to integrate intelligent workflows into every task.',
+    description:
+      'Designed from scratch to integrate intelligent workflows into every task.',
   },
   {
     icon: <FiCloudLightning size={28} />,
@@ -48,7 +49,7 @@ const WhatIs = () => {
           What is <span className="text-primary">NebulaOS</span>?
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 justify-center max-w-4xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -56,7 +57,7 @@ const WhatIs = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.4 }}
-              className="flex flex-col items-start"
+              className="flex flex-col items-center text-center"
             >
               <div className="mb-4 text-primary hover:scale-110 transition-transform duration-300">
                 {feature.icon}

@@ -1,29 +1,29 @@
-import { motion } from 'framer-motion'
-import Container from '../components/Container'
+import { motion } from "framer-motion";
+import Container from "../components/Container";
 
 const testimonials = [
   {
-    name: 'Sophia Reyes',
-    role: 'Product Manager at HyperloopAI',
-    avatar: 'https://i.pravatar.cc/100?u=1',
+    name: "Sophia Reyes",
+    role: "Product Manager at HyperloopAI",
+    avatar: "https://i.pravatar.cc/100?u=1",
     quote:
-      'NebulaOS changed how I lead my team. It feels like having an AI assistant baked into your operating system.',
+      "NebulaOS changed how I lead my team. It feels like having an AI assistant baked into your operating system.",
   },
   {
-    name: 'Liam Zhang',
-    role: 'CTO at NovaCloud',
-    avatar: 'https://i.pravatar.cc/100?u=2',
+    name: "Liam Zhang",
+    role: "CTO at NovaCloud",
+    avatar: "https://i.pravatar.cc/100?u=2",
     quote:
-      'Finally, a tool that doesn’t slow down creativity. It anticipates needs before you even act.',
+      "Finally, a tool that doesn’t slow down creativity. It anticipates needs before you even act.",
   },
   {
-    name: 'Ava Martínez',
-    role: 'Founder at SynthSpace',
-    avatar: 'https://i.pravatar.cc/100?u=3',
+    name: "Ava Martínez",
+    role: "Founder at SynthSpace",
+    avatar: "https://i.pravatar.cc/100?u=3",
     quote:
-      'NebulaOS makes everything else feel outdated. Beautiful, efficient, intelligent.',
+      "NebulaOS makes everything else feel outdated. Beautiful, efficient, intelligent.",
   },
-]
+];
 
 const Testimonials = () => {
   return (
@@ -43,7 +43,7 @@ const Testimonials = () => {
         </motion.h2>
 
         <div className="overflow-x-auto hide-scrollbar">
-          <div className="flex gap-6 md:gap-10 min-w-full md:min-w-[1200px]">
+          <div className="flex justify-center gap-6 md:gap-10 min-w-full max-w-6xl mx-auto px-2">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -52,10 +52,12 @@ const Testimonials = () => {
                 transition={{ delay: i * 0.2, duration: 0.6 }}
                 viewport={{ once: true }}
                 className="bg-white dark:bg-[#1d1d22] rounded-xl p-6 w-80 shrink-0 border border-muted/20 
-                           text-dark dark:text-light transition-colors duration-300"
+                text-dark dark:text-light transition-colors duration-300 flex flex-col"
               >
-                <p className="text-sm text-muted dark:text-muted/80 mb-4">"{t.quote}"</p>
-                <div className="flex items-center gap-4">
+                <p className="text-sm text-muted dark:text-muted/80 mb-4 flex-grow">
+                  "{t.quote}"
+                </p>
+                <div className="flex items-center gap-4 mt-auto">
                   <img
                     src={t.avatar}
                     alt={t.name}
@@ -63,7 +65,9 @@ const Testimonials = () => {
                   />
                   <div>
                     <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-muted dark:text-muted/60">{t.role}</p>
+                    <p className="text-xs text-muted dark:text-muted/60">
+                      {t.role}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -72,7 +76,7 @@ const Testimonials = () => {
         </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;
